@@ -8,11 +8,7 @@ public class BankAccount
 
     public bool UserPassword(double password)
     {
-        if (password == _userPassword)
-        {
-            return true;
-        }
-        return false;
+        return password == _userPassword;
     }
     
     public void DepositMoney(double m)
@@ -32,7 +28,7 @@ public class BankAccount
 
     public void Interface()
     {
-        Console.WriteLine("Hi Welcome to your bank account!");
+        Console.WriteLine("\nHi Welcome to your bank account!");
         Console.WriteLine("\nTo deposit, Press 1. \nTo withdraw, Press 2. \nTo check your balance, Press 3. \nFor customer support, Press 4.\nTo exit, Press 5");
         bool exit = false;
         while (!exit)
