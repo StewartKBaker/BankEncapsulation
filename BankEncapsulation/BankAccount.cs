@@ -29,40 +29,51 @@ public class BankAccount
     public void Interface()
     {
         Console.WriteLine("\nHi Welcome to your bank account!");
+        Console.WriteLine("--------------------------------------");
         Console.WriteLine("\nTo deposit, Press 1. \nTo withdraw, Press 2. \nTo check your balance, Press 3. \nFor customer support, Press 4.\nTo exit, Press 5");
-        bool exit = false;
-        while (!exit)
+        while (true)
         {
             var userInput = Console.ReadLine();
             switch (int.Parse(userInput))
             {
                 case 1:
-                    Console.WriteLine("How much money would you like to deposit?");
+                    Console.WriteLine("\nHow much money would you like to deposit?");
                     var deposit = double.Parse(Console.ReadLine());
                     DepositMoney(deposit);
+                    Console.WriteLine("Deposit Successful");
                     Console.WriteLine($"\nYour new balance is ${GetBalance()}");
                     break;
+                
                 case 2:
-                    Console.WriteLine("How much money would you like to withdraw?");
+                    Console.WriteLine("\nHow much money would you like to withdraw?");
                     var withdraw = double.Parse(Console.ReadLine());
+                    if (withdraw > _balance)
+                    {
+                        Console.WriteLine("\nCannot Withdraw, Insufficient Funds.");
+                        break;
+                    }
                     WithdrawMoney(withdraw);
+                    Console.WriteLine("Withdraw Successful");
                     Console.WriteLine($"\nYour new balance is ${GetBalance()}");
                     break;
+                
                 case 3:
-                    Console.WriteLine($"Your Current balance is ${GetBalance()}");
+                    Console.WriteLine($"\nYour Current balance is ${GetBalance()}");
                     break;
+                
                 case 4:
-                    Console.WriteLine("The current wait time is approximately 4 hours, please hold.");
-                    exit = true;
-                    break;
+                    Console.WriteLine("\nThe current wait time is approximately 4 hours, please hold.");
+                    return;
+                
                 case 5:
-                    exit = true;
-                    break;
+                    return;
+                
                 default:
                     Console.WriteLine("Please input a valid number.");
                     break;
+                
             }
-             if (!exit) Console.WriteLine("1: Deposit / 2: Withdraw / 3: Check Balance / 4: Customer Support / 5: Exit");
+             if (true) Console.WriteLine("1: Deposit / 2: Withdraw / 3: Check Balance / 4: Customer Support / 5: Exit");
         }
     }
 }

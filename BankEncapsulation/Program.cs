@@ -8,7 +8,7 @@ namespace BankEncapsulation
         {
             var myBankAccount = new BankAccount();
             
-            Console.WriteLine("(Password is 92615)\nHello and welcome to Bank of America!\nUsername: ILoveMoney22\nPassword: ");
+            Console.WriteLine("(Password is 92615)\nHello and welcome to Bank of America!\n---------------------------------------\nUsername: ILoveMoney22\nPassword: ");
             bool exit = false;
             while (!exit)
             {
