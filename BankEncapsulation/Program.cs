@@ -12,13 +12,17 @@ namespace BankEncapsulation
             bool exit = false;
             while (!exit)
             {
-                var userPass = int.Parse(Console.ReadLine());
-                if (myBankAccount.UserPassword(userPass))
+                var userPass = (Console.ReadLine());
+                if (!int.TryParse(userPass, out int input))
+                {
+                    Console.WriteLine("Please input a valid number.");
+                }
+                else if (myBankAccount.UserPassword(input))
                 {
                     myBankAccount.Interface();
                     exit = true;
                 }
-                else if (!myBankAccount.UserPassword(userPass))
+                else if (!myBankAccount.UserPassword(input))
                 {
                     Console.WriteLine("Invalid Password");
                 }

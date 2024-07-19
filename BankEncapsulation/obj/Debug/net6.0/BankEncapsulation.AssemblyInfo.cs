@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BankEncapsulation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2f25b04c67a49734a731efb3940be84cc4445b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01ed4179d56e52e08f4619585dc7f6be3a9db8ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("BankEncapsulation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BankEncapsulation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
